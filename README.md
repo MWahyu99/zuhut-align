@@ -206,4 +206,4 @@ The Rust engine (`zuhri_engine`) is proprietary (Level 3 / Enterprise).
 - 🌐 Website: [zuhut.ai](https://zuhut.ai) _(coming soon)_
 - 📖 Docs: [docs.zuhut.ai](https://docs.zuhut.ai) _(coming soon)_
 - 📧 Enterprise: alam09yahoo.com@gmail.com
-- 🐛 Issues: [github.com/zuhut-ai/zuhut-align/issues](https://github.com/zuhut-ai/zuhut-align/issues)
+- 🐛 Issues: [github.com/MWahyu99/zuhut-align/issues](https://github.com/MWahyu99/zuhut-align/issues)
