@@ -123,6 +123,26 @@ q_zuhut  = adapter.transform(q_vec)
 results  = qdrant.query_points("my_corpus", query=q_zuhut[0].tolist(), limit=5)
 ```
 
+## Use Cases
+
+adapter.transform(vecs) returns plain numpy — use it anywhere:
+
+1. Cross-model search without reindexing Corpus indexed with BGE/OpenAI/Cohere → query with a different model → no need to re-encode millions of documents.
+
+2. Switch embedding models without downtime Migrate from old model to new model gradually — old corpus still works, new query model plugs in via ZUHUT.
+
+3. Cut API embedding costs Index corpus once with expensive model (OpenAI ada-002) → query forever with a free local model (MiniLM).
+
+4. Multi-model search One corpus, queryable from multiple different models simultaneously — mobile uses small model, server uses large model.
+
+5. Edge / embedded device search Corpus on server with large model → lightweight device (Raspberry Pi, mobile) queries with small model → ZUHUT bridges the gap.
+
+6. Works with any vector database Output is plain numpy → drop into Qdrant, FAISS, ChromaDB, LanceDB, Weaviate, Milvus, or any cosine similarity search.
+
+7. Multilingual cross-model English corpus (EN model) → query in Indonesian or other languages (multilingual model) → still retrieves relevant results.
+
+8. Model evaluation & benchmarking Compare retrieval results across different models in a unified space without dimensional bias.
+
 ---
 
 ## How It Works
