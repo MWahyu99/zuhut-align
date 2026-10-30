@@ -1,0 +1,11 @@
+dist/
+build/
+zuhut_align.egg-info/
+__pycache__/
+*.pyc
+*.pyo
+.eggs/
+*.egg-info/
+.env
+.venv
+venv/
